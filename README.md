@@ -8,3 +8,11 @@ This project contains a sample controller that sends a message with a custom hea
 The quote from the documentation leads a developer to believe that by building his own `Message<?>` and sending it through `StreamBridge.send(..)` that all the messages configuration, such as content and headers, will be preserved.
 However, the included test case fails because it verifies if the message that was received through the test binder had the custom header set, which turns out to be false. This is due to the fact that
 the send method implementation ignores that the data object is of type `Message<?>`, and applies a function to transform the data into a new `GenericMessage<?>` instance, therefore all of the existing headers are not forwarded with the content
+
+### How to run the test
+
+Simply execute:
+
+```bash
+./gradlew test
+```

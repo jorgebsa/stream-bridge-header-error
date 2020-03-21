@@ -26,7 +26,7 @@ class StreamBridgeHeaderErrorApplicationTests {
     private TestRestTemplate testRestTemplate;
 
     @Test
-    void contextLoads() {
+    void checkIfCustomHeaderIsPresent() {
         String body = "test string";
         ResponseEntity<Void> responseEntity = testRestTemplate.exchange("/", HttpMethod.POST, new HttpEntity<>(body), Void.class);
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.ACCEPTED);
