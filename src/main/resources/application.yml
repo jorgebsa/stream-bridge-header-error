@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    stream:
+      source: channel
+    default:
+      contentType: application/json
