@@ -38,11 +38,11 @@ class StreamBridgeHeaderErrorApplicationTests {
         MessageHeaders headers = message.getHeaders();
 
         assertThat(headers.containsKey(CUSTOM_HEADER_KEY))
-                .as("The custom header should have been included in the message sent by StreamBridge")
+                .as("Checks if the custom header is included in the received message's headers")
                 .isTrue();
 
         assertThat(headers.get(CUSTOM_HEADER_KEY))
-                .as("The custom header value should match the hard coded value")
+                .as("Checks if the custom header value matches the expected value")
                 .isEqualTo(CUSTOM_HEADER_VALUE);
     }
 
